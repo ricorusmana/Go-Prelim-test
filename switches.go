@@ -9,7 +9,6 @@ func main() {
 	switch_on := make(map[int]int)
 	for counter_lap = 1; counter_lap <= total_switch; counter_lap++ {
 		for counter_switch = 1; counter_switch <= total_switch; counter_switch++ {
-			//fmt.Printf("\ncounter_switch: %d, counter_lap: %d", counter_switch, counter_lap)
 			if counter_switch%counter_lap == 0 {
 				if switch_on[counter_switch] == 1 {
 					delete(switch_on, counter_switch)
@@ -21,5 +20,4 @@ func main() {
 	}
 
 	fmt.Printf("\nTotal switches on after 100 lap: %d\n", len(switch_on))
-	fmt.Println(switch_on)
 }
